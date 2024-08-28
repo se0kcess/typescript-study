@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <script src="./dist/signup.js" defer></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      main {
+        width: 80%;
+        margin: 50px auto;
+        border: 1px solid red;
+      }
+      h1 {
+        text-align: center;
+      }
+
+      #signupForm {
+        border: 5px solid lightgray;
+        font-size: 0.95rem;
+      }
+      #signupForm > div {
+        border: 1px solid lightcoral;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-content: center;
+        position: relative;
+      }
+      #signupForm label {
+        width: 100px;
+        padding: 0.5rem;
+      }
+      #signupForm input {
+        flex: 1;
+        background-color: aliceblue;
+        padding: 0.5rem;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid lightblue;
+      }
+      #signupForm input:focus {
+        background-color: rgb(200, 228, 252);
+      }
+
+      #signupForm p,
+      .error {
+        font-size: 0.7rem;
+        position: absolute;
+        padding-top: 5px;
+      }
+      #signupForm p {
+        border: 1px solid blue;
+        right: 0;
+      }
+      .error {
+        left: 100px;
+        top: 100%;
+        color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>회원가입</h1>
+      <form id="signupForm">
+        <div>
+          <label for="name">회원이름</label>
+          <input type="text" id="name" required />
+          <span id="nameError" class="error"></span>
+        </div>
+        <div>
+          <label for="email">이메일</label>
+          <input type="email" id="email" required />
+          <span id="emailError" class="error"></span>
+        </div>
+        <div>
+          <label for="password">비밀번호:</label>
+          <input type="password" id="password" required />
+          <span id="passwordError" class="error"></span>
+        </div>
+        <div>
+          <label for="confirmPassword">비밀번호 확인:</label>
+          <input type="password" id="confirmPassword" required />
+          <span id="confirmPasswordError" class="error"></span>
+        </div>
+        <div>
+          <label for="phone">전화번호:</label>
+          <input type="tel" id="phone" required />
+          <span id="phoneError" class="error"></span>
+        </div>
+        <div>
+          <label for="address">주소:</label>
+          <input type="text" id="address" required />
+          <span id="addressError" class="error"></span>
+        </div>
+
+        <button type="submit">회원가입하기</button>
+      </form>
+    </main>
+    <script></script>
+  </body>
+</html>
